@@ -1,0 +1,25 @@
+version: '2'
+services:
+    timetracker-ui:
+        container_name: timetracker-ui
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: ashfaquetanveer/timetrackerui:latest
+        environment:
+            TIMETRACKERURL: 'http://timetracker:8080'
+        expose:
+            - 9090
+        ports:
+            - 9090:9090
+        links:
+            - timetracker:timetracker
+        depends_on:
+            - timetracker
+    timetracker:
+        container_name: timetracker
+        image: alirizasaral/timetracker:1
+        expose:
+            - 8080
+        ports:
+            - 8080:8080
