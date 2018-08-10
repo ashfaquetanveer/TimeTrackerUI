@@ -2,9 +2,6 @@ version: '2'
 services:
     timetracker-ui:
         container_name: timetracker-ui
-        build:
-            context: .
-            dockerfile: Dockerfile
         image: ashfaquetanveer/timetrackerui:latest
         environment:
             TIMETRACKERURL: 'http://timetracker:8080'
