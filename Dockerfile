@@ -12,5 +12,5 @@ ADD target/timetracker-0.0.1-SNAPSHOT.jar timetracker-0.0.1-SNAPSHOT.jar
 EXPOSE 80
 
 
-# Run app.py when the container launches
+# Run application when the container launches
 CMD java -jar timetracker-0.0.1-SNAPSHOT.jar
